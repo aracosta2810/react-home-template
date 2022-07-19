@@ -122,3 +122,27 @@
     margin-bottom: 300px;
   }
 }
+
+.cards-container .card{
+  position: relative;
+  overflow: hidden;
+  min-width: 250px;
+  max-height: 200px;
+  border: none;
+}
+
+.cards-container .card img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards-container .card-body{
+  position: absolute;
+  background: rgb(0, 0, 0);
+  filter: opacity(0.8);
+  color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+
