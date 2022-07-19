@@ -18,6 +18,27 @@
   /* left: 15px; */
 }
 
+.footer-brand {
+  color: #748A9D;
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.footer-brand:hover {
+  color: #c2cad1;
+}
+
+.footer-brand::before {
+  content: "lorem ipsum";
+  font-size: 0.7rem;
+  position: absolute;
+  top: -8px;
+  /* left: 15px; */
+}
+
 .nav-section {
   color: #25405f;
   font-weight: bold;
