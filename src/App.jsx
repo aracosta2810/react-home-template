@@ -1,6 +1,7 @@
 import "./App.css";
 import Cards from "./Components/Cards";
 import ContactUsForm from "./Components/ContactUsForm";
+import Features from "./Components/Features";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import NavBar from "./Components/NavBar";
@@ -11,10 +12,13 @@ function App() {
     <div>
       <NavBar />
       <Hero />
-      <ContactUsForm/>
-      <TextInformation/>
-      <Cards/>
-      <Footer/>
+      <ContactUsForm />
+      <div className="container">
+        <TextInformation />
+        <Cards />
+        <Features />
+      </div>
+      <Footer />
     </div>
   );
 }

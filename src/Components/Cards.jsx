@@ -17,7 +17,7 @@ const cards = [
 
 const Cards = () => {
   return (
-    <div className="container cards-container">
+    <div className="cards-container">
       <h4 className="mb-4">Lorem ipsum dolor sit amet.</h4>
       <div className="row justify-content-center">
         {cards.map((item, key) => (
