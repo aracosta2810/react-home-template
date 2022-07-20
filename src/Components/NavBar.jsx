@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const sections = [
-  { href: "/", title: "Section1" },
-  { href: "/", title: "Section2" },
-  { href: "/", title: "Section3" },
-  { href: "/", title: "Section4" },
+  { href: "/section1", title: "Section1" },
+  { href: "/section2", title: "Section2" },
+  { href: "/section3", title: "Section3" },
+  { href: "/section4", title: "Section4" },
 ];
 
 const NavBar = () => {
@@ -14,9 +15,9 @@ const NavBar = () => {
         className="w-100 d-flex justify-content-end  justify-content-md-center bd-gutter "
         aria-label="Main navigation"
       >
-        <a className="navbar-brand p-0 me-0 me-lg-5" href="/">
+        <Link className="navbar-brand p-0 me-0 me-lg-5" to="/">
           GTS<i className="bi bi-gear-wide-connected"></i>
-        </a>
+        </Link>
         <button
           className="navbar-toggler d-flex d-md-none order-3 p-2 ms-5 ms-md-0"
           type="button"
@@ -29,14 +30,14 @@ const NavBar = () => {
           <i className="bi bi-list"></i>
         </button>
         <div
-          className="offcanvas-md offcanvas-end"
+          className="offcanvas-md w-50 offcanvas-end"
           id="bdNavbar"
           aria-labelledby="bdNavbarOffcanvasLabel"
           data-bs-scroll="true"
         >
           <div className="offcanvas-header px-4 pb-0">
             <h5 className="offcanvas-title " id="bdNavbarOffcanvasLabel">
-              Bootstrap
+              Menu
             </h5>
             <button
               type="button"
@@ -46,18 +47,18 @@ const NavBar = () => {
               data-bs-target="#bdNavbar"
             />
           </div>
-          <div className="offcanvas-body">
+          <div className="offcanvas-body pt-0">
             <hr className="d-lg-none text-dark-50" />
             <ul className="navbar-nav flex-row flex-wrap bd-navbar-nav ">
               {sections.map((item, key) => (
                 <li key={key} className="nav-item nav-section col-6 col-md-auto">
-                  <a
+                  <Link
                     className="nav-link py-2 px-0 active"
                     aria-current="true"
-                    href={item.href}
+                    to={item.href}
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

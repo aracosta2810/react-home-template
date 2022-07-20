@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,9 +10,9 @@ const Footer = () => {
       >
         <div className="row justify-content-center px-0 px-md-5">
           <div className="col-auto">
-            <a className="footer-brand p-0 me-0 me-lg-5" href="/">
+            <Link className="footer-brand p-0 me-0 me-lg-5" to="/">
               GTS<i className="bi bi-gear-wide-connected"></i>
-            </a>
+            </Link>
           </div>
           <div className="col-auto">
             <div>Lorem</div>

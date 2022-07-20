@@ -1,23 +1,18 @@
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Cards from "./Components/Cards";
-import ContactUsForm from "./Components/ContactUsForm";
-import Features from "./Components/Features";
 import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
+import Home from "./Components/Home/Home";
 import NavBar from "./Components/NavBar";
-import TextInformation from "./Components/TextInformation";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Hero />
-      <ContactUsForm />
-      <div className="container">
-        <TextInformation />
-        <Cards />
-        <Features />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/section1" element={<div className="display-3 mt-5">Section 1</div>} />
+        <Route path="*" element={<Navigate to={"/404"} replace={true} />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -13,7 +13,7 @@ const Features = () => {
       <h4 className="mb-4">Lorem ipsum dolor sit amet consectetur.</h4>
       <div className="row ">
         {features.map((item, key) => (
-          <div className="col-3 d-flex ">
+          <div className="col-6 mt-3 mt-md-0 col-md-3 d-flex justify-content-center justify-content-md-start">
             <div>
               <div className="text-center">
                 <i className={item.class} style={{ fontSize: "3rem" }}></i>
